@@ -22,6 +22,11 @@ public class Secretario extends Persona {
         super(idPerson, Cedula, Nombre, Apellido, Telefono, Direccion);
         this.LoginUsuario = new Usuario(idUsuario, NombreUsuario);
     }
+    
+    public Secretario(int idPerson, int Cedula, String Nombre, String Apellido, int Telefono, String Direccion, String NombreUsuario, String password) {
+        super(idPerson, Cedula, Nombre, Apellido, Telefono, Direccion);
+        this.LoginUsuario = new Usuario(password, NombreUsuario);
+    }
 
     public Usuario getLoginUsuario() {
         return LoginUsuario;

@@ -11,6 +11,7 @@ public class Persona {
     protected  String Apellido;
     protected  int Telefono;
     protected  String Direccion;
+    private String TipoUsuario;
 
     public Persona() {
     }
@@ -29,6 +30,16 @@ public class Persona {
         this.Apellido = Apellido;
         this.Telefono = Telefono;
         this.Direccion = Direccion;
+    } 
+    
+    public Persona(int idPersona,int Cedula, String Nombre, String Apellido, int Telefono, String Direccion, String nombre) {
+        this.idPersona = idPersona;
+        this.Cedula = Cedula;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Telefono = Telefono;
+        this.Direccion = Direccion;
+        this.TipoUsuario = nombre;
     } 
 
     public int getIdPersona() {
@@ -79,4 +90,7 @@ public class Persona {
         this.Direccion = Direccion;
     }
 
+    public String getTipoUsuario() {
+        return TipoUsuario;
+    } 
 }
