@@ -17,6 +17,13 @@ public class Usuario {
         this.NombreUsuario = NombreUsuario;
         this.Password = Password;
     }
+   
+    public Usuario(int userId, String NombreUsuario, String Password) {
+        this.idUsuario = userId;
+        this.NombreUsuario = NombreUsuario;
+        this.Password = Password;
+    }
+    
     public Usuario(int idUsuario, String NombreUsuario){
         this.idUsuario = idUsuario;
         this.NombreUsuario = NombreUsuario;
