@@ -21,15 +21,10 @@ public class Caso {
     public Caso() {
     }
     
-    
-
-    
-
-    public Caso(int NumeroCaso, String Descripcion, Date FechaCfeacion, int Estado, Querellante Denunciante, Date FechaCreacion) {
+    public Caso(int NumeroCaso, String Descripcion, Date FechaCfeacion, Querellante Denunciante, Date FechaCreacion) {
         this.NumeroCaso = NumeroCaso;
         this.Descripcion = Descripcion;
-        this.FechaCfeacion = FechaCfeacion;
-       
+        this.FechaCfeacion = FechaCfeacion;       
         this.Denunciante = Denunciante;
         
     }
@@ -42,9 +37,13 @@ public class Caso {
         this.Denunciante = Denunciante;
         this.RegistroHistorico = RegistroHistorico;
     }
-    
-    
 
+    public Caso(int NumeroCaso, String Descripcion, Date FechaCfeacion, int idestado, String estadoCaso) {
+        this.NumeroCaso = NumeroCaso;
+        this.Descripcion = Descripcion;
+        this.FechaCfeacion = FechaCfeacion;
+        this.estadoCaso = new Estado(idestado, estadoCaso);
+    }
 
     public int getNumeroCaso() {
         return NumeroCaso;
