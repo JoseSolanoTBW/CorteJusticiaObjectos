@@ -8,30 +8,37 @@ import java.util.Date;
 
 public class DetalleHistorial {
     private int idDetalle;
-    private int Estado;
+    private Estado estadoHistorial;
     private Date FechaActualizacion;
 
     public DetalleHistorial() {
     }
 
-    public DetalleHistorial(int Estado, Date FechaActualizacion) {
-        
-        this.Estado = Estado;
-        this.FechaActualizacion = FechaActualizacion;
-    }
-        public DetalleHistorial(int idDetalle, int Estado, Date FechaActualizacion) {
-        
-        this.Estado = Estado;
+    public DetalleHistorial(int idDetalle, Estado estadoHistorial, Date FechaActualizacion) {
+        this.idDetalle = idDetalle;
+        this.estadoHistorial = estadoHistorial;
         this.FechaActualizacion = FechaActualizacion;
     }
 
-    public int getEstado() {
-        return Estado;
+    
+
+    public int getIdDetalle() {
+        return idDetalle;
     }
 
-    public void setEstado(int Estado) {
-        this.Estado = Estado;
+    public void setIdDetalle(int idDetalle) {
+        this.idDetalle = idDetalle;
     }
+
+    public Estado getEstadoHistorial() {
+        return estadoHistorial;
+    }
+
+    public void setEstadoHistorial(Estado estadoHistorial) {
+        this.estadoHistorial = estadoHistorial;
+    }
+
+    
 
     public Date getFechaActualizacion() {
         return FechaActualizacion;

@@ -14,22 +14,35 @@ public class Caso {
     private String Descripcion;
     private Date FechaCfeacion;
     private Juez JuezAsignado;
-    private int Estado;
+    private Estado estadoCaso;
     private Querellante Denunciante;
     private Historial RegistroHistorico;
 
-    public Caso(int Estado, Date FechaCreacion) {
-        RegistroHistorico = new Historial(Estado, FechaCreacion);
+    public Caso() {
     }
+    
+    
+
+    
 
     public Caso(int NumeroCaso, String Descripcion, Date FechaCfeacion, int Estado, Querellante Denunciante, Date FechaCreacion) {
         this.NumeroCaso = NumeroCaso;
         this.Descripcion = Descripcion;
         this.FechaCfeacion = FechaCfeacion;
-        this.Estado = Estado;
+       
         this.Denunciante = Denunciante;
-        this. RegistroHistorico = new Historial(Estado, FechaCreacion);
+        
     }
+
+    public Caso(String Descripcion, Date FechaCfeacion, Juez JuezAsignado, Estado estadoCaso, Querellante Denunciante, Historial RegistroHistorico) {
+        this.Descripcion = Descripcion;
+        this.FechaCfeacion = FechaCfeacion;
+        this.JuezAsignado = JuezAsignado;
+        this.estadoCaso = estadoCaso;
+        this.Denunciante = Denunciante;
+        this.RegistroHistorico = RegistroHistorico;
+    }
+    
     
 
 
@@ -65,13 +78,7 @@ public class Caso {
         this.JuezAsignado = JuezAsignado;
     }
 
-    public int getEstado() {
-        return Estado;
-    }
-
-    public void setEstado(int Estado) {
-        this.Estado = Estado;
-    }
+    
 
     public Querellante getDenunciante() {
         return Denunciante;
@@ -87,6 +94,14 @@ public class Caso {
 
     public void setRegistroHistorico(Historial RegistroHistorico) {
         this.RegistroHistorico = RegistroHistorico;
+    }
+
+    public Estado getEstadoCaso() {
+        return estadoCaso;
+    }
+
+    public void setEstadoCaso(Estado estadoCaso) {
+        this.estadoCaso = estadoCaso;
     }
     
 }

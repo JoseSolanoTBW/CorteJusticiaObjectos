@@ -19,9 +19,9 @@ public class Historial {
         this.ActualizacionEstado = ActualizacionEstado;
     }
     
-    public Historial(int Estado, Date FechaActualizacion) {
+    public Historial(int iddetalle,Estado est, Date FechaActualizacion) {
         this.ActualizacionEstado = IsListCreated();
-        DetalleHistorial detalleHistorico = new DetalleHistorial(Estado, FechaActualizacion);
+        DetalleHistorial detalleHistorico = new DetalleHistorial(iddetalle,est, FechaActualizacion);
         this.SaveDetalleHistorico(detalleHistorico);
     }
     
