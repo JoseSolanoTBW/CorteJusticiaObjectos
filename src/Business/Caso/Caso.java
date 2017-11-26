@@ -44,6 +44,17 @@ public class Caso {
         this.FechaCfeacion = FechaCfeacion;
         this.estadoCaso = new Estado(idestado, estadoCaso);
     }
+    
+    public Caso(int NumeroCaso, String Descripcion, Date FechaCfeacion, int idestado, String estadoCaso, int idPersona, String nombrePersona, String Apellido) {
+        this.NumeroCaso = NumeroCaso;
+        this.Descripcion = Descripcion;
+        this.FechaCfeacion = FechaCfeacion;
+        this.estadoCaso = new Estado(idestado, estadoCaso);
+        this.Denunciante = new Querellante();
+        this.Denunciante.setIdPersona(idPersona);
+        this.Denunciante.setNombre(nombrePersona);
+        this.Denunciante.setApellido(Apellido);
+    }
 
     public int getNumeroCaso() {
         return NumeroCaso;
