@@ -17,6 +17,7 @@ public class Caso {
     private Estado estadoCaso;
     private Querellante Denunciante;
     private Historial RegistroHistorico;
+    private String Resolucion;
 
     public Caso() {
     }
@@ -54,6 +55,17 @@ public class Caso {
         this.Denunciante.setIdPersona(idPersona);
         this.Denunciante.setNombre(nombrePersona);
         this.Denunciante.setApellido(Apellido);
+    }
+    public Caso(int NumeroCaso, String Descripcion, Date FechaCfeacion, int idestado, String estadoCaso, int idPersona, String nombrePersona, String Apellido, String Resolucion) {
+        this.NumeroCaso = NumeroCaso;
+        this.Descripcion = Descripcion;
+        this.FechaCfeacion = FechaCfeacion;
+        this.estadoCaso = new Estado(idestado, estadoCaso);
+        this.Denunciante = new Querellante();
+        this.Denunciante.setIdPersona(idPersona);
+        this.Denunciante.setNombre(nombrePersona);
+        this.Denunciante.setApellido(Apellido);
+        this.Resolucion = Resolucion;
     }
 
     public int getNumeroCaso() {
@@ -112,6 +124,14 @@ public class Caso {
 
     public void setEstadoCaso(Estado estadoCaso) {
         this.estadoCaso = estadoCaso;
+    }
+
+    public String getResolucion() {
+        return Resolucion;
+    }
+
+    public void setResolucion(String Resolucion) {
+        this.Resolucion = Resolucion;
     }
     
 }
